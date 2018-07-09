@@ -48,11 +48,11 @@ along with a number representing how many times that value occurs in the column.
 5. Hover the mouse over one of the names in the `Facet` list. You should see that you have an `edit` function available.
 6. You could use this to fix an error immediately, and OpenRefine will ask whether you want to make the same correction to every value it finds like that one. But OpenRefine offers even better ways to find and fix these errors, which we'll use instead. We'll learn about these when we talk about clustering.
 
-### Solution
-- `Chirdozo` is likely a mis-entry of `Chirodzo`.
-- `Ruca` is likely a mis-entry of `Ruaca`.
-- `Ruaca - Nhamuenda` and `Ruaca-Nhamuenda` refer to the same place (differ only by spaces around the hyphen). You might also wonder if both of these are the same as `Ruaca`. We will see how to correct these misspelled and mistyped entries in a later exercise.
-- The entry `49` is almost certainly an error but you will not be able to fix it by reference to other data. 
+> ### Solution
+> - `Chirdozo` is likely a mis-entry of `Chirodzo`.
+> - `Ruca` is likely a mis-entry of `Ruaca`.
+> - `Ruaca - Nhamuenda` and `Ruaca-Nhamuenda` refer to the same place (differ only by spaces around the hyphen). You might also wonder if both of these are the same as `Ruaca`. We will see how to correct these misspelled and mistyped entries in a later exercise.
+> - The entry `49` is almost certainly an error but you will not be able to fix it by reference to other data. 
 
 ### Exercise 2
 1. Using faceting, find out how many different `interview_date` values there are in the survey results.
@@ -60,11 +60,10 @@ along with a number representing how many times that value occurs in the column.
 3. Use faceting to produce a timeline display for `interview_date`. You will need to use `Edit cells` > `Common transforms` > `To date` to convert this column to dates.
 4. During what period were most of the interviews collected?
 
-### Solution
-For the column `interview_date` do `Facet` > `Text facet`. A box will appear in the left panel showing that there are 19 unique entries in this column.   
-By default, the column `interview_date` is formatted as Text. You can change the format by doing `Edit cells` > `Common transforms` >
-`To date`.  Notice the the values in the column turn green. Doing `Facet` > `Timeline facet` creates a box in the left panel that shows a histogram of the number of entries for each date.  
-Most of the data was collected in November of 2016.  
+> ### Solution
+> - For the column `interview_date` do `Facet` > `Text facet`. A box will appear in the left panel showing that there are 19 unique entries in this column.   
+> - By default, the column `interview_date` is formatted as Text. You can change the format by doing `Edit cells` > `Common transforms` > `To date`. Notice the the values in the column turn green. Doing `Facet` > `Timeline facet` creates a box in the left panel that shows a histogram of the number of entries for each date.  
+> - Most of the data was collected in November of 2016.  
 
 ## More on Facets
 [OpenRefine Wiki: Faceting](https://github.com/OpenRefine/OpenRefine/wiki/Faceting)
@@ -123,10 +122,10 @@ The data in the `items_owned` column is a set of items in a list. The list is in
 ### Exercise 3
 Use this same strategy to remove the single quote marks (`'`), the  right square brackets (`]`), and spaces from the `items_owned` column.
 
-### Solution
-1. `value.replace("'", "")`
-2. `value.replace("]", "")`
-3. `value.replace(" ", "")`  
+> ### Solution
+> 1. `value.replace("'", "")`
+> 2. `value.replace("]", "")`
+> 3. `value.replace(" ", "")`  
 
 You should now have a list of items separated by semi-colons (`;`). 
 
@@ -142,17 +141,15 @@ You should now see a new text facet box in the left-hand pane.
 ### Exercise 4
 Which two items are the most commonly owned? Which are the two least commonly owned?
 
-### Solution
-Select `Sort by:` `count`. The most commonly owned items are mobile phone and radio, the least commonly owned are cars and computers. 
+> ### Solution
+> Select `Sort by:` `count`. The most commonly owned items are mobile phone and radio, the least commonly owned are cars and computers. 
 
 ### Exercise 5
 Perform the same clean up steps and customized text faceting for the `months_lack_food` column. Which month(s) were farmers more likely to lack food? 
 
-### Solution
-All four cleaning steps can be performed by combining `.replace` statements. The command is:  
-`value.replace("[", "").replace("]", "").replace(" ", "").replace("'", "")`
-This can also be done in four separate steps if preferred.
-November was the most common month for respondents to lack food.
+> ### Solution
+> - All four cleaning steps can be performed by combining `.replace` statements. The command is: `value.replace("[", "").replace("]", "").replace(" ", "").replace("'", "")`. This can also be done in four separate steps if preferred.
+> - November was the most common month for respondents to lack food.
 
 ### Exercise 6
 Perform the same clean up steps for the `months_no_water`, `liv_owned`, `res_change`, and `no_food_mitigation` columns.
@@ -163,7 +160,6 @@ Hint: To reuse a GREL command, click the `History` tab and then click `Reuse` ne
 It's common while exploring and cleaning a dataset to discover after you've made a change that you really should have done something else first. OpenRefine provides `Undo` and `Redo` operations to make this easy.
 
 ### Exercise 7
-
 1. Click where it says `Undo / Redo` on the left side of the screen. All the changes you have made so far are listed here.
 2. Click on the step that you want to go back to, in this case go back several steps to before you had done any text transformation. 
 3. Visually confirm that those columns now contain the special characters that we had removed previously.
