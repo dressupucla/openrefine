@@ -5,14 +5,11 @@ The data for this lesson is a part of the Data Carpentry Social Sciences worksho
 The data used in this lesson is a subset of the teaching version that has been intentionally 'messed up' for this lesson.
 
 **Download** the data file to your computer by [clicking this link](https://ndownloader.figshare.com/files/11502815). (direct link: <https://ndownloader.figshare.com/files/11502815>)
-{: .prereq}
-
 
 ## Software
 For this lesson you will need **OpenRefine** (formerly Google Refine) and a web browser.
 
 Note: this is a Java program that runs on your machine (not in the cloud). It runs inside your browser, but no web connection is needed.
-{: .prereq}
 
 #### Windows
 - Check that you have Firefox or Chrome browsers installed and set as your 
