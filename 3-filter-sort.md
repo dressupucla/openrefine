@@ -1,5 +1,5 @@
 
-# Filering and Sorting in OpenRefine
+# Filtering and Sorting in OpenRefine
 
 ## Filtering
 
